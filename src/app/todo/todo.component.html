@@ -1,3 +1,4 @@
-<p>
-  todo works!
-</p>
+<div *ngFor="let todo of todo$ | async">
+  {{todo.itemByItemId.description}}
+  <span>{{todo.itemByItemId.status}}</span>
+</div>

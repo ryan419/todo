@@ -12,5 +12,6 @@ import { TodoComponent } from './todo.component';
     GraphQLModule,
   ],
   providers: [TodoService],
+  exports: [TodoComponent],
 })
 export class TodoModule { }

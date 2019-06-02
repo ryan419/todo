@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +25,8 @@ export class TodoService {
           }
         }
       }`
-    }).valueChanges;
+    }).valueChanges.pipe(
+      map((res: any) => res.data.allTodos.nodes as Array<any>),
+    );
   }
 }
