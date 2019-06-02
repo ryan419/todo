@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    TodoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
